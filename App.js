@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View , Button} from 'react-native';
+import { StyleSheet,ScrollView, Text, View , Button} from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 function HomeScreen({ navigation }) {
   return (
+    <ScrollView>
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>Home Screen</Text>
       <Button
@@ -12,10 +13,12 @@ function HomeScreen({ navigation }) {
         onPress={() => navigation.navigate("Details")}
       />
     </View>
+    </ScrollView>
   );
 }
 function AboutScreen({ navigation }) {
   return (
+    <ScrollView>
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>Details Screen</Text>
       <Button
@@ -29,6 +32,7 @@ function AboutScreen({ navigation }) {
         onPress={() => navigation.popToTop()}
       />
     </View>
+    </ScrollView>
   );
 }
 
